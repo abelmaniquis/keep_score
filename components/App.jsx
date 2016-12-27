@@ -1,10 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const App = () => {
-    <div>
-        <h1>Hello App</h1>
-    </div>
+import {Router, Route, IndexRoute, browserHistory} from 'react-router'
+
+class App extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+        <Router history={browserHistory}>
+        </Router>
+        )
+    }
+    
 }
 
-ReactDOM.render(<App/>, document.getElementById("app"))
+ReactDOM.render(<App />, document.getElementById('app'))
